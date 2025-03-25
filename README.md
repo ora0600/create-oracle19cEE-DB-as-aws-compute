@@ -339,7 +339,7 @@ Now save AMI image from compute service so that we are able to create a new comp
 * go to your EC2 dashboard : in the instances list
 * select your instance, right click on your instance
 * select image and template / create image
-* AMI ID: ami-0e047a017a5cef91a
+* AMI ID: ami-XXXX
 * AMI Name: oracleDB19cEE
 * AMI description : Oracle 19.3c EE with all precononfigurtion setup for Confluent CDC
 * Region: Frankfurt
