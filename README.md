@@ -5,22 +5,22 @@ The big advantage of doing this you can start an Oracle DB 19c EE very fast if y
 Before doing this please check your license with Oracle. For Demo around this you can hopefully use the [OTN developer license](https://www.oracle.com/downloads/licenses/standard-license.html).
  Here is the step-by-step guide. Please enter your own values:
 
-1. Create AWS EC2 Comput:
-   Region: FRA
-   Name: cmoradb19c
-   AMI: Amazon Linux 2 Kernel 5.10 AMI 2.0.20240529.0 x86_64 HVM gp2 - ami-06801a226628c00ce
-   Architecture: 64-bit (x86)
-   Instance-TYpe: m5.4xlarge (16 vCPU, 64 GiB memory, 1000 GiB storage (gp3 volume, 3000 IOPS))
-   Key pair: cmawskeyoraclegg
-   Default VPC
-   Subnet: Default-Public-Subnet
-   Autoassign Public IP : enable
-   Create Security group: cmoradb19c_sg
-   Port 22 for ssh Source Type: custom Source: MyIP
-   Port 1521 DB Source Type: custom Source: MyIP and the IP for other service need to contact the DB
-   Port 5500 EM Source Type: custom Source: MyIP
-   Storage 1 x 1000 GiB GP3 Root volume, 3000 IOPS, (Not encrypted)
-Launch Instance: After Luanch add TAG owner=cmutzlitz@confluent.io
+1. Create AWS EC2 Compute:
+      Region: FRA
+      Name: cmoradb19c
+      AMI: Amazon Linux 2 Kernel 5.10 AMI 2.0.20240529.0 x86_64 HVM gp2 - ami-06801a226628c00ce
+      Architecture: 64-bit (x86)
+      Instance-TYpe: m5.4xlarge (16 vCPU, 64 GiB memory, 1000 GiB storage (gp3 volume, 3000 IOPS))
+      Key pair: cmawskeyoraclegg
+      Default VPC
+      Subnet: Default-Public-Subnet
+      Autoassign Public IP : enable
+      Create Security group: cmoradb19c_sg
+      Port 22 for ssh Source Type: custom Source: MyIP
+      Port 1521 DB Source Type: custom Source: MyIP and the IP for other service need to contact the DB
+      Port 5500 EM Source Type: custom Source: MyIP
+      Storage 1 x 1000 GiB GP3 Root volume, 3000 IOPS, (Not encrypted)
+      Launch Instance: After Luanch add TAG owner=cmutzlitz@confluent.io
 
  Now, we need to install everything into the DB:
 
